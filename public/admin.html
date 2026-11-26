@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Admin | Links</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <main class="wrap admin">
+    <form id="login" class="panel">
+      <h1>Admin</h1>
+      <p class="muted">Enter your admin password to edit your page.</p>
+      <input id="pw" type="password" placeholder="Password" autocomplete="current-password" required />
+      <button class="btn primary" type="submit">Log in</button>
+      <p id="login-err" class="err"></p>
+    </form>
+
+    <div id="editor" hidden>
+      <div class="topbar">
+        <h1>Edit your page</h1>
+        <div>
+          <a class="btn" href="/" target="_blank">View page ↗</a>
+          <button id="save" class="btn primary" type="button">Save</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Profile</h2>
+        <label>Name <input data-bind="profile.name" /></label>
+        <label>Bio <textarea data-bind="profile.bio" rows="2"></textarea></label>
+        <label>Avatar image URL
+          <div class="row"><input data-bind="profile.avatar" placeholder="https://… or upload" />
+          <button class="btn" type="button" data-upload="profile.avatar">Upload</button></div>
+        </label>
+      </div>
+
+      <div class="panel">
+        <h2>Social media</h2>
+        <p class="muted">Pick the platform and type your username. Leave "Custom link" empty unless the auto link is wrong.</p>
+        <div id="socials-list"></div>
+        <button id="add-social" class="btn" type="button">+ Add social</button>
+      </div>
+
+      <div id="sections-list"></div>
+      <button id="add-section" class="btn" type="button">+ Add section</button>
+
+      <div class="panel">
+        <h2>QR code for flyers</h2>
+        <p class="muted">Points to <code id="qr-url"></code>. Set <code>PUBLIC_URL</code> on the server to your real domain.</p>
+        <img id="qr-img" class="qr-preview" alt="QR code" />
+        <div class="row">
+          <a class="btn" href="/qr.png?size=2048" download="qr-code.png">Download PNG</a>
+          <a class="btn" href="/qr.svg" download="qr-code.svg">Download SVG (best for print)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="file" type="file" hidden />
+
+  <script src="/platforms.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>

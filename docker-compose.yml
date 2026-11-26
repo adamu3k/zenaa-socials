@@ -1,0 +1,13 @@
+services:
+  socials:
+    build: .
+    container_name: zenaa-socials
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      - socials-data:/app/data   # your links + uploaded files live here
+
+volumes:
+  socials-data:

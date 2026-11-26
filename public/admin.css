@@ -1,0 +1,41 @@
+.admin { max-width: 760px; }
+.admin h1 { font-size: 22px; }
+.admin h2 { font-size: 16px; margin: 0 0 10px; }
+.panel {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px; margin-bottom: 16px;
+}
+.muted { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+.err { color: #fca5a5; min-height: 1em; }
+label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+input, textarea, select {
+  width: 100%; font: inherit; font-size: 15px; color: var(--text);
+  background: rgba(0,0,0,.3); border: 1px solid var(--border); border-radius: 10px;
+  padding: 9px 11px; margin-top: 4px;
+}
+select option { color: #111; }
+textarea { resize: vertical; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row > input { flex: 1; min-width: 160px; }
+.btn {
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none;
+  color: var(--text); background: rgba(255,255,255,.1); border: 1px solid var(--border);
+  border-radius: 10px; padding: 9px 14px; display: inline-block; margin-top: 4px;
+}
+.btn:hover { background: rgba(255,255,255,.18); }
+.btn.primary { background: var(--accent); color: #1e1b4b; border-color: transparent; }
+.btn.danger { color: #fca5a5; }
+.btn.small { padding: 5px 10px; font-size: 13px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; position: sticky; top: 0; padding: 10px 0; background: var(--bg1); z-index: 2; }
+.topbar h1 { margin: 0; }
+.item {
+  border: 1px solid var(--border); border-radius: 12px; padding: 12px; margin-bottom: 10px;
+  background: rgba(0,0,0,.15);
+}
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px; }
+@media (max-width: 560px) { .grid2 { grid-template-columns: 1fr; } }
+.item-actions { display: flex; gap: 6px; justify-content: flex-end; }
+.preview-link { font-size: 12px; color: var(--accent); word-break: break-all; }
+.qr-preview { width: 180px; height: 180px; background: #fff; padding: 8px; border-radius: 10px; display: block; margin-bottom: 10px; }
+.section-head { display: flex; gap: 8px; align-items: end; }
+.section-head label { flex: 1; }

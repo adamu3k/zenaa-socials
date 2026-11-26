@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Links</title>
+  <meta name="description" content="All my social media, posts and resources in one place." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="profile">
+      <div class="avatar" id="avatar"></div>
+      <h1 id="name"></h1>
+      <p id="bio" class="bio"></p>
+      <button id="share" class="share" type="button">Share this page</button>
+    </header>
+
+    <section aria-labelledby="follow-h">
+      <h2 id="follow-h" class="section-title">Follow me</h2>
+      <div id="socials" class="socials"></div>
+    </section>
+
+    <div id="sections"></div>
+
+    <footer class="footer">
+      <button id="qr-toggle" class="linkish" type="button">Show QR code</button>
+      <div id="qr" class="qr" hidden><img alt="QR code for this page" src="/qr.svg" width="200" height="200" /></div>
+    </footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/platforms.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

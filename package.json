@@ -1,0 +1,13 @@
+{
+  "name": "zenaa-socials",
+  "version": "1.0.0",
+  "description": "Self-hosted link-in-bio page: socials, follow buttons, posts and resources",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
